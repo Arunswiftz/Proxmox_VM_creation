@@ -1,0 +1,60 @@
+---
+- name: Creating VM in proxmox
+  hosts: all
+  become: true
+  vars:
+    os_url: "https://releases.ubuntu.com/22.04.2/ubuntu-22.04.2-live-server-amd64.iso"
+    os_path: "/var/lib/vz/template/iso/Ubuntu Server 22.04 LTS.iso" #actual path on proxmox
+  tasks:
+    - name: Downloading "Ubuntu Server 22.04 LTS.iso"
+      get_url:
+        url: "{{ os_url }}"
+        dest: "{{ os_path }}"
+    - name: including defaults
+      include_vars: "vars/defaults.yml"
+    - name: including list
+      include_vars: "vars/list.yml"
+    - name: Creating VMs in proxmox
+      proxmox_kvm:
+#Parameters for proxmox host login
+        api_host: "{{ item.host }}"
+        api_user: "{{ user }}"
+        api_password: "{{ passwd }}"
+        acpi: yes #default -discover and configure computer hardware components
+        agent: 1 #default -the QEMU Guest Agent
+#Parameters for creating VM in Proxmox
+        #node: "{{ item.node_name }}"
+        name: "{{ item.vm_name: }}"
+        description: "{{ item.vm_des }}"
+#OS
+        ide: '{"ide0": "local-lvm:{{ os_path }},media=cdrom"}'
+#System
+        bios: seabios
+        scsihw: virtio-scsi-pci
+#Disks (storage)
+        boot: cnd #boot_order c(HD), d(cd), n (network)
+        bootdisk: scsi
+        ide: 
+          - storage: local
+            size: "{{ item.vm_disk1 }}"
+            format: raw
+
+          - storage: local
+            size: "{{ item.vm_disk2 }}"
+            format: raw
+#CPU Settings
+        cpu: kvm64 #default
+        cpuunits: 1000 #default
+        corers: "{{ item.vm_cores }}"
+        sockets: "{{ item.vm_sockets }}"
+        kvm: yes
+#memory -RAM
+        memory: "{{ item.vm_memory }}"
+        net:
+          net0: 'model:virtio,bridge:vmbr0,rate:200,firewall:1' #network interface
+        ipconfig: '{ip:"{{ item.ip_addr }}"}' 
+#other:
+        localtime: true
+#loop
+        with_items:
+          - "{{ h1_vms, h2_vms, h3_vms }}"        
