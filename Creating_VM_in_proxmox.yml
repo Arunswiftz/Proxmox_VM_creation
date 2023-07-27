@@ -26,8 +26,6 @@
         #node: "{{ item.node_name }}"
         name: "{{ item.vm_name: }}"
         description: "{{ item.vm_des }}"
-#OS
-        ide: '{"ide0": "local-lvm:{{ os_path }},media=cdrom"}'
 #System
         bios: seabios
         scsihw: virtio-scsi-pci
@@ -42,6 +40,8 @@
           - storage: local
             size: "{{ item.vm_disk2 }}"
             format: raw
+#OS
+          - '{"ide0": "local-lvm:{{ os_path }},media=cdrom"}'
 #CPU Settings
         cpu: kvm64 #default
         cpuunits: 1000 #default
@@ -57,4 +57,6 @@
         localtime: true
 #loop
         with_items:
-          - "{{ h1_vms, h2_vms, h3_vms }}"        
+          - "{{ proxmox1 }}"
+          - "{{ proxmox2 }}"
+          - "{{ proxmox3 }}"

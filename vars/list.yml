@@ -1,4 +1,4 @@
-h1_vms:
+proxmox1:
   - host: 192.168.3.151
     vm_name: ds-mss-mas-014
     vm_des: Kubernetes Master
@@ -79,8 +79,8 @@ h1_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.135
 
-h2_vms:
-  - host: 192.168.3.151
+proxmox2:
+  - host: 192.168.3.152
     vm_name: ds-mss-mas-02
     vm_des: Kubernetes Master
     vm_cores: 4
@@ -90,7 +90,7 @@ h2_vms:
     #vm_disk2:  #GB Not_included
     ip_addr: 192.168.175.102
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-util-11
     vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
     vm_cores: 16
@@ -100,7 +100,7 @@ h2_vms:
     vm_disk2: 1024 #GB
     ip_addr: 192.168.175.113
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-util-12
     vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
     vm_cores: 16
@@ -110,7 +110,7 @@ h2_vms:
     vm_disk2: 1024 #GB
     ip_addr: 192.168.175.114
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-edn-11
     vm_des: ES - Data - Node - 11
     vm_cores: 8
@@ -120,7 +120,7 @@ h2_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.141
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-edn-12
     vm_des: ES - Data - Node - 12
     vm_cores: 8
@@ -130,7 +130,7 @@ h2_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.142
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-edn-13
     vm_des: ES - Data - Node - 13
     vm_cores: 8
@@ -140,7 +140,7 @@ h2_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.143
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-edn-14
     vm_des: ES - Data - Node - 14
     vm_cores: 8
@@ -150,7 +150,7 @@ h2_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.144
 
-  - host: 192.168.3.151
+  - host: 192.168.3.152
     vm_name: ds-mss-edn-15
     vm_des: ES - Data - Node - 15
     vm_cores: 8
@@ -160,8 +160,8 @@ h2_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.145
 
-h3_vms:
-  - host: 192.168.3.151
+proxmox3:
+  - host: 192.168.3.153
     vm_name: ds-mss-mas-03
     vm_des: Kubernetes Master
     vm_cores: 4
@@ -171,7 +171,7 @@ h3_vms:
     #vm_disk2:  #GB Not_included
     ip_addr: 192.168.175.103
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-util-21
     vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
     vm_cores: 16
@@ -181,7 +181,7 @@ h3_vms:
     vm_disk2: 1024 #GB
     ip_addr: 192.168.175.115
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-util-22
     vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
     vm_cores: 16
@@ -191,7 +191,7 @@ h3_vms:
     vm_disk2: 1024 #GB
     ip_addr: 192.168.175.116
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-edn-21
     vm_des: ES - Data - Node - 21
     vm_cores: 8
@@ -201,7 +201,7 @@ h3_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.151
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-edn-22
     vm_des: ES - Data - Node - 22
     vm_cores: 8
@@ -211,7 +211,7 @@ h3_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.152
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-edn-23
     vm_des: ES - Data - Node - 23
     vm_cores: 8
@@ -221,7 +221,7 @@ h3_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.153
 
-  - host: 192.168.3.151
+  - host: 192.168.3.153
     vm_name: ds-mss-edn-24
     vm_des: ES - Data - Node - 24
     vm_cores: 8
@@ -231,7 +231,7 @@ h3_vms:
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.154
 
-  - host: 192.168.3.151 
+  - host: 192.168.3.153 
     vm_name: ds-mss-edn-25
     vm_des: ES - Data - Node - 25
     vm_cores: 8
@@ -240,6 +240,3 @@ h3_vms:
     vm_disk1: 80 #GB
     vm_disk2: 4096 #GB
     ip_addr: 192.168.175.155
-
-
-
