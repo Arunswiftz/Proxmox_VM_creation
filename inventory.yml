@@ -1,11 +1,12 @@
 ---
   all:
-    proxmox1:
-      ansible_host: 192.168.3.151
-      ansible_port: 8006
-    proxmox2:
-      ansible_host: 192.168.3.152
-      ansible_port: 8006
-    proxmox3:
-      ansible_host: 192.168.3.153
-      ansible_port: 8006
+    hosts:
+      proxmox1:
+        ansible_host: 192.168.3.151
+        ansible_port: 8006
+      proxmox2:
+        ansible_host: 192.168.3.152
+        ansible_port: 8006
+      proxmox3:
+        ansible_host: 192.168.3.153
+        ansible_port: 8006
