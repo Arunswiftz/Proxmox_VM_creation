@@ -57,7 +57,7 @@
           net0: 'model:virtio,bridge:vmbr0,rate:200,firewall:1' #network interface
         ipconfig: '{ip:"{{ item.ip_addr }}"}'
 
-    - name: creating NIC interface
+    #- name: creating NIC interface
       proxmox_nic:
         api_host: "{{ item.host }}"
         api_user: "{{ item.u_name }}"
