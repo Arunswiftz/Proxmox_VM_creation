@@ -7,7 +7,7 @@ proxmox1:
         vm_des: Kubernetes Master
         vm_cores: 4
         vm_sockets: 1
-        vm_memory: 16 #GB
+        vm_memory: 16384 #MB
         vm_disk1: 80 #GB
         #vm_disk2: #GB Not_included
         ip_addr: 192.168.175.101
@@ -16,7 +16,7 @@ proxmox1:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.111
@@ -25,7 +25,7 @@ proxmox1:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.112
@@ -34,7 +34,7 @@ proxmox1:
         vm_des: ES - Data - Node - 01
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.131
@@ -43,7 +43,7 @@ proxmox1:
         vm_des: ES - Data - Node - 02
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.132
@@ -52,7 +52,7 @@ proxmox1:
         vm_des: ES - Data - Node - 03
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.133
@@ -61,7 +61,7 @@ proxmox1:
         vm_des: ES - Data - Node - 04
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.134
@@ -70,7 +70,7 @@ proxmox1:
         vm_des: ES - Data - Node - 05
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.135
@@ -84,7 +84,7 @@ proxmox2:
         vm_des: Kubernetes Master
         vm_cores: 4
         vm_sockets: 1
-        vm_memory: 16 #GB
+        vm_memory: 16384 #MB
         vm_disk1: 80 #GB
         #vm_disk2:  #GB Not_included
         ip_addr: 192.168.175.102
@@ -93,7 +93,7 @@ proxmox2:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.113
@@ -102,7 +102,7 @@ proxmox2:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.114
@@ -111,7 +111,7 @@ proxmox2:
         vm_des: ES - Data - Node - 11
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.141
@@ -120,7 +120,7 @@ proxmox2:
         vm_des: ES - Data - Node - 12
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.142
@@ -129,7 +129,7 @@ proxmox2:
         vm_des: ES - Data - Node - 13
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.143
@@ -138,7 +138,7 @@ proxmox2:
         vm_des: ES - Data - Node - 14
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.144
@@ -147,7 +147,7 @@ proxmox2:
         vm_des: ES - Data - Node - 15
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.145
@@ -161,7 +161,7 @@ proxmox3:
         vm_des: Kubernetes Master
         vm_cores: 4
         vm_sockets: 1
-        vm_memory: 16 #GB
+        vm_memory: 16384 #MB
         vm_disk1: 80 #GB
         #vm_disk2:  #GB Not_included
         ip_addr: 192.168.175.103
@@ -170,7 +170,7 @@ proxmox3:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.115
@@ -179,7 +179,7 @@ proxmox3:
         vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
         vm_cores: 16
         vm_sockets: 2
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 1024 #GB
         ip_addr: 192.168.175.116
@@ -188,7 +188,7 @@ proxmox3:
         vm_des: ES - Data - Node - 21
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.151
@@ -197,7 +197,7 @@ proxmox3:
         vm_des: ES - Data - Node - 22
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.152
@@ -206,7 +206,7 @@ proxmox3:
         vm_des: ES - Data - Node - 23
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.153
@@ -215,7 +215,7 @@ proxmox3:
         vm_des: ES - Data - Node - 24
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.154
@@ -224,7 +224,7 @@ proxmox3:
         vm_des: ES - Data - Node - 25
         vm_cores: 8
         vm_sockets: 1
-        vm_memory: 64 #GB
+        vm_memory: 65536 #MB
         vm_disk1: 80 #GB
         vm_disk2: 4096 #GB
         ip_addr: 192.168.175.155
