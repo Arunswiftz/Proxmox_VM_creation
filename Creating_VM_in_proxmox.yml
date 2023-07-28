@@ -10,21 +10,21 @@
       get_url:
         url: "{{ os_url }}"
         dest: "{{ os_path }}"
-    - name: including defaults
-      include_vars: "vars/defaults.yml"
+    #- name: including defaults
+    #  include_vars: "vars/defaults.yml"
     - name: including list
       include_vars: "vars/list.yml"
     - name: Creating VMs in proxmox
       proxmox_kvm:
 #Parameters for proxmox host login
         api_host: "{{ item.host }}"
-        api_user: "{{ user }}"
-        api_password: "{{ passwd }}"
+        api_user: "{{ item.u_name }}"
+        api_password: "{{ item.u_pass }}"
         acpi: yes #default -discover and configure computer hardware components
         agent: 1 #default -the QEMU Guest Agent
 #Parameters for creating VM in Proxmox
         #node: "{{ item.node_name }}"
-        name: "{{ item.vm_name: }}"
+        name: "{{ item.vm_name }}"
         description: "{{ item.vm_des }}"
 #System
         bios: seabios
@@ -34,11 +34,11 @@
         bootdisk: scsi
         ide: 
           - storage: local
-            size: "{{ item.vm_disk1 }}"
+            size: "{{ item.vm_disk1 }}G"
             format: raw
 
           - storage: local
-            size: "{{ item.vm_disk2 }}"
+            size: "{{ item.vm_disk2 }}G"
             format: raw
 #OS
           - '{"ide0": "local-lvm:{{ os_path }},media=cdrom"}'
@@ -50,13 +50,26 @@
         kvm: yes
 #memory -RAM
         memory: "{{ item.vm_memory }}"
-        net:
-          net0: 'model:virtio,bridge:vmbr0,rate:200,firewall:1' #network interface
-        ipconfig: '{ip:"{{ item.ip_addr }}"}' 
 #other:
         localtime: true
+#network        
+        net:
+          net0: 'model:virtio,bridge:vmbr0,rate:200,firewall:1' #network interface
+        ipconfig: '{ip:"{{ item.ip_addr }}"}'
+
+    - name: creating NIC interface
+      proxmox_nic:
+        api_host: "{{ item.host }}"
+        api_user: "{{ item.u_name }}"
+        api_password: "{{ item.u_pass }}"
+        name: "{{ item.vm_name }}"
+        interface: net0 #default_model: virtio 
+        bridge: vmbr0
+        link_down: false #interface is connected 
+        firewall: false #default
 #loop
-        with_items:
-          - "{{ proxmox1 }}"
-          - "{{ proxmox2 }}"
-          - "{{ proxmox3 }}"
+        with_subelements:
+          - '{{ proxmox1 }}'  #\
+          - '{{ proxmox2 }}'  #---- main items
+          - '{{ proxmox3 }}'  #/
+          - vms               #---- sub_items

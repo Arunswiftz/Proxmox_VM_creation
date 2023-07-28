@@ -1,242 +1,230 @@
 proxmox1:
   - host: 192.168.3.151
-    vm_name: ds-mss-mas-014
-    vm_des: Kubernetes Master
-    vm_cores: 4
-    vm_sockets: 1
-    vm_memory: 16 #GB
-    vm_disk1: 80 #GB
-    #vm_disk2: #GB Not_included
-    ip_addr: 192.168.175.101
+    u_name: root #default
+    u_pass: root #passwd
+    vms:
+      - vm_name: ds-mss-mas-014
+        vm_des: Kubernetes Master
+        vm_cores: 4
+        vm_sockets: 1
+        vm_memory: 16 #GB
+        vm_disk1: 80 #GB
+        #vm_disk2: #GB Not_included
+        ip_addr: 192.168.175.101
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-util-01
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.111
+      - vm_name: ds-mss-util-01
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.111
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-util-02
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.112
+      - vm_name: ds-mss-util-02
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.112
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-edn-01
-    vm_des: ES - Data - Node - 01
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.131
+      - vm_name: ds-mss-edn-01
+        vm_des: ES - Data - Node - 01
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.131
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-edn-02
-    vm_des: ES - Data - Node - 02
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.132
+      - vm_name: ds-mss-edn-02
+        vm_des: ES - Data - Node - 02
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.132
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-edn-03
-    vm_des: ES - Data - Node - 03
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.133
+      - vm_name: ds-mss-edn-03
+        vm_des: ES - Data - Node - 03
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.133
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-edn-04
-    vm_des: ES - Data - Node - 04
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.134
+      - vm_name: ds-mss-edn-04
+        vm_des: ES - Data - Node - 04
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.134
 
-  - host: 192.168.3.151
-    vm_name: ds-mss-edn-05
-    vm_des: ES - Data - Node - 05
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.135
+      - vm_name: ds-mss-edn-05
+        vm_des: ES - Data - Node - 05
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.135
 
 proxmox2:
   - host: 192.168.3.152
-    vm_name: ds-mss-mas-02
-    vm_des: Kubernetes Master
-    vm_cores: 4
-    vm_sockets: 1
-    vm_memory: 16 #GB
-    vm_disk1: 80 #GB
-    #vm_disk2:  #GB Not_included
-    ip_addr: 192.168.175.102
+    u_name: root #default
+    u_pass: root #passwd
+    vms:
+      - vm_name: ds-mss-mas-02
+        vm_des: Kubernetes Master
+        vm_cores: 4
+        vm_sockets: 1
+        vm_memory: 16 #GB
+        vm_disk1: 80 #GB
+        #vm_disk2:  #GB Not_included
+        ip_addr: 192.168.175.102
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-util-11
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.113
+      - vm_name: ds-mss-util-11
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.113
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-util-12
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.114
+      - vm_name: ds-mss-util-12
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.114
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-edn-11
-    vm_des: ES - Data - Node - 11
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.141
+      - vm_name: ds-mss-edn-11
+        vm_des: ES - Data - Node - 11
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.141
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-edn-12
-    vm_des: ES - Data - Node - 12
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.142
+      - vm_name: ds-mss-edn-12
+        vm_des: ES - Data - Node - 12
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.142
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-edn-13
-    vm_des: ES - Data - Node - 13
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.143
+      - vm_name: ds-mss-edn-13
+        vm_des: ES - Data - Node - 13
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.143
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-edn-14
-    vm_des: ES - Data - Node - 14
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.144
+      - vm_name: ds-mss-edn-14
+        vm_des: ES - Data - Node - 14
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.144
 
-  - host: 192.168.3.152
-    vm_name: ds-mss-edn-15
-    vm_des: ES - Data - Node - 15
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.145
+      - vm_name: ds-mss-edn-15
+        vm_des: ES - Data - Node - 15
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.145
 
 proxmox3:
   - host: 192.168.3.153
-    vm_name: ds-mss-mas-03
-    vm_des: Kubernetes Master
-    vm_cores: 4
-    vm_sockets: 1
-    vm_memory: 16 #GB
-    vm_disk1: 80 #GB
-    #vm_disk2:  #GB Not_included
-    ip_addr: 192.168.175.103
+    u_name: root #default
+    u_pass: root #passwd
+    vms:
+      - vm_name: ds-mss-mas-03
+        vm_des: Kubernetes Master
+        vm_cores: 4
+        vm_sockets: 1
+        vm_memory: 16 #GB
+        vm_disk1: 80 #GB
+        #vm_disk2:  #GB Not_included
+        ip_addr: 192.168.175.103
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-util-21
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.115
+      - vm_name: ds-mss-util-21
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.115
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-util-22
-    vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
-    vm_cores: 16
-    vm_sockets: 2
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 1024 #GB
-    ip_addr: 192.168.175.116
+      - vm_name: ds-mss-util-22
+        vm_des: Kafka / Zookeeper / Logstash-GW / Logstash-Indexer, monitoring, ES Master,Grafana
+        vm_cores: 16
+        vm_sockets: 2
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 1024 #GB
+        ip_addr: 192.168.175.116
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-edn-21
-    vm_des: ES - Data - Node - 21
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.151
+      - vm_name: ds-mss-edn-21
+        vm_des: ES - Data - Node - 21
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.151
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-edn-22
-    vm_des: ES - Data - Node - 22
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.152
+      - vm_name: ds-mss-edn-22
+        vm_des: ES - Data - Node - 22
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.152
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-edn-23
-    vm_des: ES - Data - Node - 23
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.153
+      - vm_name: ds-mss-edn-23
+        vm_des: ES - Data - Node - 23
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.153
 
-  - host: 192.168.3.153
-    vm_name: ds-mss-edn-24
-    vm_des: ES - Data - Node - 24
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.154
+      - vm_name: ds-mss-edn-24
+        vm_des: ES - Data - Node - 24
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.154
 
-  - host: 192.168.3.153 
-    vm_name: ds-mss-edn-25
-    vm_des: ES - Data - Node - 25
-    vm_cores: 8
-    vm_sockets: 1
-    vm_memory: 64 #GB
-    vm_disk1: 80 #GB
-    vm_disk2: 4096 #GB
-    ip_addr: 192.168.175.155
+      - vm_name: ds-mss-edn-25
+        vm_des: ES - Data - Node - 25
+        vm_cores: 8
+        vm_sockets: 1
+        vm_memory: 64 #GB
+        vm_disk1: 80 #GB
+        vm_disk2: 4096 #GB
+        ip_addr: 192.168.175.155
